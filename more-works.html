@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>王乐江 - 更多作品</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;500;600;700&family=Noto+Sans+SC:wght@300;400;500&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#8B5A2B',
+                        secondary: '#D2B48C',
+                        accent: '#F5F5DC',
+                        dark: '#3E2723',
+                        light: '#F9F5EB'
+                    },
+                    fontFamily: {
+                        serif: ['Noto Serif SC', 'serif'],
+                        sans: ['Noto Sans SC', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <style type="text/tailwindcss">
+        @layer utilities {
+            .text-shadow {
+                text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+            }
+            .bg-texture {
+                background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43-7c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63 31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM34 90c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm56-76c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM12 86c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm28-65c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm23-11c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-6 60c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm29 22c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zM32 63c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm57-13c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-9-21c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM60 91c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM35 41c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM12 60c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2z' fill='%23d2b48c' fill-opacity='0.1' fill-rule='evenodd'/%3E%3C/svg%3E");
+            }
+            .poem-card {
+                transition: all 0.3s ease;
+            }
+            .poem-card:hover {
+                transform: translateY(-5px);
+            }
+            .filter-btn-active {
+                @apply bg-primary text-white;
+            }
+            .filter-btn-inactive {
+                @apply bg-white/70 hover:bg-primary/10 text-dark/70;
+            }
+        }
+    </style>
+</head>
+<body class="bg-light bg-texture font-sans text-dark">
+    <!-- 导航栏 -->
+    <nav class="sticky top-0 bg-white/90 shadow-md z-50 backdrop-blur-sm">
+        <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <a href="index.html" class="flex items-center gap-2">
+                <i class="fa fa-book text-primary text-xl"></i>
+                <span class="font-serif font-semibold text-primary text-lg">王乐江诗集</span>
+            </a>
+            <a href="wlj.html" class="flex items-center gap-1 text-dark/70 hover:text-primary transition-colors">
+                <i class="fa fa-arrow-left"></i>
+                <span>返回主页</span>
+            </a>
+        </div>
+    </nav>
+
+    <!-- 头部区域 -->
+    <header class="py-12 md:py-20 border-b border-secondary/20">
+        <div class="container mx-auto px-4 text-center">
+            <h1 class="text-3xl md:text-4xl lg:text-5xl font-serif font-bold text-primary mb-4">更多诗歌作品</h1>
+            <div class="w-20 h-1 bg-secondary mx-auto mb-6"></div>
+            <p class="text-dark/70 max-w-2xl mx-auto">收录王乐江创作的精选七言绝句及古体诗，按创作时间排序（最新在前）</p>
+        </div>
+    </header>
+
+    <!-- 主要内容区域 -->
+    <main class="container mx-auto px-4 py-12 max-w-5xl">
+        <!-- 作品筛选 -->
+        <div class="flex flex-wrap justify-center gap-4 mb-10">
+            <button class="filter-btn filter-btn-active px-4 py-2 rounded-md transition-colors" data-filter="all">全部作品</button>
+            <button class="filter-btn filter-btn-inactive px-4 py-2 rounded-md transition-colors" data-filter="古绝">古绝</button>
+            <button class="filter-btn filter-btn-inactive px-4 py-2 rounded-md transition-colors" data-filter="律绝">律绝</button>
+            <button class="filter-btn filter-btn-inactive px-4 py-2 rounded-md transition-colors" data-filter="五言律诗">五言律诗</button>
+            <button class="filter-btn filter-btn-inactive px-4 py-2 rounded-md transition-colors" data-filter="七言律诗">七言律诗</button>
+        </div>
+
+        <!-- 作品列表 -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8" id="poemList">
+            <!-- 2025年 秋（七言律诗） -->
+            <div class="poem-card bg-white/70 rounded-lg p-6 shadow-md" data-type="七言律诗">
+                <div class="flex justify-between items-start mb-4">
+                    <h3 class="text-xl font-serif font-medium text-primary">《秋》</h3>
+                    <span class="text-sm text-dark/60">2025年09月25日作</span>
+                </div>
+                <div class="prose max-w-none text-dark/80 italic border-l-4 border-secondary pl-4 py-1 mb-4">
+                    <p>秋烦小巷叶愁黄，风恶乱旋残日凉。</p>
+                    <p>昔鹊忙庭得见处，今丝闲院月离窗。</p>
+                    <p>伤花避泪垂翘首，悲草藏孤压厚霜。</p>
+                    <p>微雨暗城秋渐去，落白又蔽旧垣墙。</p>
+                </div>
+                <div class="flex justify-end">
+                    <button class="text-primary text-sm hover:underline flex items-center" data-bs-toggle="modal" data-bs-target="#poemDetail1">
+                        <span>查看注释</span>
+                        <i class="fa fa-angle-right ml-1"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- 2025年 故夏（律绝） -->
+            <div class="poem-card bg-white/70 rounded-lg p-6 shadow-md" data-type="律绝">
+                <div class="flex justify-between items-start mb-4">
+                    <h3 class="text-xl font-serif font-medium text-primary">《故夏》</h3>
+                    <span class="text-sm text-dark/60">2025年05月14日作</span>
+                </div>
+                <div class="prose max-w-none text-dark/80 italic border-l-4 border-secondary pl-4 py-1 mb-4">
+                    <p>少儿持棍互逐藏，衣溅河泥嬉闹脏。</p>
+                    <p>总角故人今又在，惟余蝉寂旧篱墙。</p>
+                </div>
+                <div class="flex justify-end">
+                    <button class="text-primary text-sm hover:underline flex items-center" data-bs-toggle="modal" data-bs-target="#poemDetail2">
+                        <span>查看注释</span>
+                        <i class="fa fa-angle-right ml-1"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- 2024年 甲辰中秋游广元游记（七言律诗） -->
+            <div class="poem-card bg-white/70 rounded-lg p-6 shadow-md" data-type="七言律诗">
+                <div class="flex justify-between items-start mb-4">
+                    <h3 class="text-xl font-serif font-medium text-primary">《甲辰中秋游广元游记》</h3>
+                    <span class="text-sm text-dark/60">2024年09月18日作</span>
+                </div>
+                <div class="prose max-w-none text-dark/80 italic border-l-4 border-secondary pl-4 py-1 mb-4">
+                    <p>长月中秋渝水舟，巴山烟雨凤凰楼。</p>
+                    <p>烟峦天堑阴平渡，锦上危城昭化洲。</p>
+                    <p>鹤唳崖前川主寺，嘉陵洲外剑门悠。</p>
+                    <p>若非相去短时后，不负西南晚至秋。</p>
+                </div>
+                <div class="flex justify-end">
+                    <button class="text-primary text-sm hover:underline flex items-center" data-bs-toggle="modal" data-bs-target="#poemDetail3">
+                        <span>查看注释</span>
+                        <i class="fa fa-angle-right ml-1"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- 2024年 仲夏（古绝） -->
+            <div class="poem-card bg-white/70 rounded-lg p-6 shadow-md" data-type="古绝">
+                <div class="flex justify-between items-start mb-4">
+                    <h3 class="text-xl font-serif font-medium text-primary">《仲夏》（古绝）</h3>
+                    <span class="text-sm text-dark/60">2024年05月15日作</span>
+                </div>
+                <div class="prose max-w-none text-dark/80 italic border-l-4 border-secondary pl-4 py-1 mb-4">
+                    <p>树影斑驳瘦南风，年华恰此散愁浓。</p>
+                    <p>他时若念旧今梦，又逢一年是夏中。</p>
+                </div>
+                <div class="flex justify-end">
+                    <button class="text-primary text-sm hover:underline flex items-center" data-bs-toggle="modal" data-bs-target="#poemDetail4">
+                        <span>查看注释</span>
+                        <i class="fa fa-angle-right ml-1"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- 2023年 沈园感«钗头凤»（七言律诗） -->
+            <div class="poem-card bg-white/70 rounded-lg p-6 shadow-md" data-type="七言律诗">
+                <div class="flex justify-between items-start mb-4">
+                    <h3 class="text-xl font-serif font-medium text-primary">《沈园感«钗头凤»》（七言律诗）</h3>
+                    <span class="text-sm text-dark/60">2023年10月26日作</span>
+                </div>
+                <div class="prose max-w-none text-dark/80 italic border-l-4 border-secondary pl-4 py-1 mb-4">
+                    <p>秋苑梧桐辞旧叶，西风催雁觅新安。</p>
+                    <p>沈园负誓墙垣破，云梦寻盟鸾凤欢。</p>
+                    <p>散若三秋缘道尽，偏逢六载意犹寒。</p>
+                    <p>垂丝岸柳春还绿，旧处河池空怨残。</p>
+                </div>
+                <div class="flex justify-end">
+                    <button class="text-primary text-sm hover:underline flex items-center" data-bs-toggle="modal" data-bs-target="#poemDetail5">
+                        <span>查看注释</span>
+                        <i class="fa fa-angle-right ml-1"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- 2023年 喜春（律绝） -->
+            <div class="poem-card bg-white/70 rounded-lg p-6 shadow-md" data-type="律绝">
+                <div class="flex justify-between items-start mb-4">
+                    <h3 class="text-xl font-serif font-medium text-primary">《喜春》（律绝）</h3>
+                    <span class="text-sm text-dark/60">2023年04月03日作</span>
+                </div>
+                <div class="prose max-w-none text-dark/80 italic border-l-4 border-secondary pl-4 py-1 mb-4">
+                    <p>东风迟语早春晚，未碍山桃趁序开。</p>
+                    <p>最爱残阳落山处，喜作闲事待春来。</p>
+                </div>
+                <div class="flex justify-end">
+                    <button class="text-primary text-sm hover:underline flex items-center" data-bs-toggle="modal" data-bs-target="#poemDetail6">
+                        <span>查看注释</span>
+                        <i class="fa fa-angle-right ml-1"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- 2023年 月菊有感（律绝） -->
+            <div class="poem-card bg-white/70 rounded-lg p-6 shadow-md" data-type="律绝">
+                <div class="flex justify-between items-start mb-4">
+                    <h3 class="text-xl font-serif font-medium text-primary">《月菊有感》（律绝）</h3>
+                    <span class="text-sm text-dark/60">2023年03月29日作</span>
+                </div>
+                <div class="prose max-w-none text-dark/80 italic border-l-4 border-secondary pl-4 py-1 mb-4">
+                    <p>功名阿附世俗物，何处重寻旧少年。</p>
+                    <p>纵若金章难授佩，不如菊酒月窗前。</p>
+                </div>
+                <div class="flex justify-end">
+                    <button class="text-primary text-sm hover:underline flex items-center" data-bs-toggle="modal" data-bs-target="#poemDetail7">
+                        <span>查看注释</span>
+                        <i class="fa fa-angle-right ml-1"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- 2022年 聊斋白秋练有感（七言律诗） -->
+            <div class="poem-card bg-white/70 rounded-lg p-6 shadow-md" data-type="七言律诗">
+                <div class="flex justify-between items-start mb-4">
+                    <h3 class="text-xl font-serif font-medium text-primary">《聊斋白秋练有感》（七言律诗）</h3>
+                    <span class="text-sm text-dark/60">2022年06月01日作</span>
+                </div>
+                <div class="prose max-w-none text-dark/80 italic border-l-4 border-secondary pl-4 py-1 mb-4">
+                    <p>枯荆黄土满孤城，烟月凝霜寒气生。</p>
+                    <p>嘶飓长鸣天欲破，骤霖乱打日昏蒙。</p>
+                    <p>千征城破壮兵尽，万里途艰马伴行。</p>
+                    <p>纵阻万程情却近，戎装赴远自寻征。</p>
+                </div>
+                <div class="flex justify-end">
+                    <button class="text-primary text-sm hover:underline flex items-center" data-bs-toggle="modal" data-bs-target="#poemDetail8">
+                        <span>查看注释</span>
+                        <i class="fa fa-angle-right ml-1"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- 2022年 徽州游记（古绝） -->
+            <div class="poem-card bg-white/70 rounded-lg p-6 shadow-md" data-type="古绝">
+                <div class="flex justify-between items-start mb-4">
+                    <h3 class="text-xl font-serif font-medium text-primary">《徽州游记》（古绝）</h3>
+                    <span class="text-sm text-dark/60">2022年08月31日作</span>
+                </div>
+                <div class="prose max-w-none text-dark/80 italic border-l-4 border-secondary pl-4 py-1 mb-4">
+                    <p>墨迹山川轻云净，诗雨江南赤子心。</p>
+                    <p>倚舟闲月乘情渡，凭栏望远俟君音。</p>
+                </div>
+                <div class="flex justify-end">
+                    <button class="text-primary text-sm hover:underline flex items-center" data-bs-toggle="modal" data-bs-target="#poemDetail9">
+                        <span>查看注释</span>
+                        <i class="fa fa-angle-right ml-1"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- 2022年 瑞雪有怀（五言律诗） -->
+            <div class="poem-card bg-white/70 rounded-lg p-6 shadow-md" data-type="五言律诗">
+                <div class="flex justify-between items-start mb-4">
+                    <h3 class="text-xl font-serif font-medium text-primary">《瑞雪有怀》（五言律诗）</h3>
+                    <span class="text-sm text-dark/60">2022年05月02日作</span>
+                </div>
+                <div class="prose max-w-none text-dark/80 italic border-l-4 border-secondary pl-4 py-1 mb-4">
+                    <p>冬月清寒近，秋华逐水流。</p>
+                    <p>三年驹隙事，一霎近时休。</p>
+                    <p>微颔忆前日，孤身梦旧游。</p>
+                    <p>霜铺江北地，雪覆道旁幽。</p>
+                </div>
+                <div class="flex justify-end">
+                    <button class="text-primary text-sm hover:underline flex items-center" data-bs-toggle="modal" data-bs-target="#poemDetail10">
+                        <span>查看注释</span>
+                        <i class="fa fa-angle-right ml-1"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- 回到顶部按钮 -->
+        <button id="backToTop" class="fixed bottom-8 right-8 bg-primary text-white w-12 h-12 rounded-full flex items-center justify-center shadow-lg opacity-0 invisible transition-all duration-300 hover:bg-primary/90">
+            <i class="fa fa-arrow-up"></i>
+        </button>
+    </main>
+
+    <!-- 页脚区域 -->
+    <footer class="bg-primary/90 text-white py-8 mt-16">
+        <div class="container mx-auto px-4 text-center">
+            <div class="mb-4">
+                <h2 class="text-xl font-serif font-semibold mb-1">王乐江</h2>
+                <p class="text-white/80 text-sm">用诗歌编织生活的经纬</p>
+            </div>
+            <div class="text-white/60 text-xs">
+                <p>© 2024 王乐江诗歌作品集 | 版权所有</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- 作品详情模态框（保持不变） -->
+    <!-- 1. 秋 -->
+    <div class="modal fade" id="poemDetail1" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered max-w-md">
+            <div class="modal-content bg-white rounded-lg shadow-xl">
+                <div class="modal-header border-b border-secondary/20">
+                    <h5 class="modal-title text-primary font-serif">《秋》注释</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body p-6">
+                    <p class="text-dark/80 mb-3"><span class="font-medium">注释：</span>作于2025年秋，借秋日景象抒发时光易逝之感。</p>
+                    <p class="text-dark/80"><span class="font-medium">赏析：</span>全诗以"秋烦"起笔，通过"叶愁黄""风恶""残日凉"等意象营造萧瑟氛围，末句"落白又蔽旧垣墙"以冬雪暗喻时光更迭，余韵悠长。</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 2. 故夏 -->
+    <div class="modal fade" id="poemDetail2" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered max-w-md">
+            <div class="modal-content bg-white rounded-lg shadow-xl">
+                <div class="modal-header border-b border-secondary/20">
+                    <h5 class="modal-title text-primary font-serif">《故夏》注释</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body p-6">
+                    <p class="text-dark/80 mb-3"><span class="font-medium">注释：</span>回忆童年夏日情景，对比今昔变迁。</p>
+                    <p class="text-dark/80"><span class="font-medium">赏析：</span>前两句"少儿持棍互逐藏，衣溅河泥嬉闹脏"以白描手法勾勒童年嬉戏场景，后两句"总角故人今又在，惟余蝉寂旧篱墙"通过今昔对比，暗含物是人非之感。</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 3. 甲辰中秋游广元游记 -->
+    <div class="modal fade" id="poemDetail3" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered max-w-md">
+            <div class="modal-content bg-white rounded-lg shadow-xl">
+                <div class="modal-header border-b border-secondary/20">
+                    <h5 class="modal-title text-primary font-serif">《甲辰中秋游广元游记》注释</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body p-6">
+                    <p class="text-dark/80 mb-3"><span class="font-medium">注释：</span>甲辰年中秋游历四川广元所作，记录当地风光。</p>
+                    <p class="text-dark/80"><span class="font-medium">赏析：</span>全诗嵌入"凤凰楼""阴平渡""昭化洲""剑门"等广元地名，融景入情，尾联"若非相去短时后，不负西南晚至秋"表达对蜀地秋景的留恋。</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 4. 仲夏 -->
+    <div class="modal fade" id="poemDetail4" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered max-w-md">
+            <div class="modal-content bg-white rounded-lg shadow-xl">
+                <div class="modal-header border-b border-secondary/20">
+                    <h5 class="modal-title text-primary font-serif">《仲夏》注释</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body p-6">
+                    <p class="text-dark/80 mb-3"><span class="font-medium">注释：</span>夏日感怀之作，感叹时光流转。</p>
+                    <p class="text-dark/80"><span class="font-medium">赏析：</span>"树影斑驳瘦南风"以拟人手法写夏日风势，"他时若念旧今梦，又逢一年是夏中"暗含对时光循环的哲思，平淡中见深意。</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 5. 沈园感«钗头凤» -->
+    <div class="modal fade" id="poemDetail5" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered max-w-md">
+            <div class="modal-content bg-white rounded-lg shadow-xl">
+                <div class="modal-header border-b border-secondary/20">
+                    <h5 class="modal-title text-primary font-serif">《沈园感«钗头凤»》注释</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body p-6">
+                    <p class="text-dark/80 mb-3"><span class="font-medium">注释：</span>游沈园有感陆游与唐琬爱情故事，化用《钗头凤》意境。云梦：指洞庭湖。</p>
+                    <p class="text-dark/80"><span class="font-medium">赏析：</span>以"秋苑梧桐""西风催雁"起兴，借"沈园负誓""云梦寻盟"对比今昔，尾联"垂丝岸柳春还绿，旧处河池空怨残"以景物依旧反衬人事已非，呼应陆游原诗悲情。</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 6. 喜春 -->
+    <div class="modal fade" id="poemDetail6" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered max-w-md">
+            <div class="modal-content bg-white rounded-lg shadow-xl">
+                <div class="modal-header border-b border-secondary/20">
+                    <h5 class="modal-title text-primary font-serif">《喜春》注释</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body p-6">
+                    <p class="text-dark/80 mb-3"><span class="font-medium">注释：</span>春日即景，表达对春天的喜爱。</p>
+                    <p class="text-dark/80"><span class="font-medium">赏析：</span>"东风迟语早春晚"写春来之缓，"未碍山桃趁序开"赞花迎春光，末句"喜作闲事待春来"以闲笔显闲适心境，呼应"喜春"题旨。</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 7. 月菊有感 -->
+    <div class="modal fade" id="poemDetail7" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered max-w-md">
+            <div class="modal-content bg-white rounded-lg shadow-xl">
+                <div class="modal-header border-b border-secondary/20">
+                    <h5 class="modal-title text-primary font-serif">《月菊有感》注释</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body p-6">
+                    <p class="text-dark/80 mb-3"><span class="font-medium">注释：</span>观月赏菊有感而作。金章：指张仪相印，代指功名。</p>
+                    <p class="text-dark/80"><span class="font-medium">赏析：</span>前两句"功名阿附世俗物，何处重寻旧少年"直抒胸臆，感叹功名累人，后两句"纵若金章难授佩，不如菊酒月窗前"以对比手法，表达对隐逸生活的向往。</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 8. 聊斋白秋练有感 -->
+    <div class="modal fade" id="poemDetail8" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered max-w-md">
+            <div class="modal-content bg-white rounded-lg shadow-xl">
+                <div class="modal-header border-b border-secondary/20">
+                    <h5 class="modal-title text-primary font-serif">《聊斋白秋练有感》注释</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body p-6">
+                    <p class="text-dark/80 mb-3"><span class="font-medium">注释：</span>读《聊斋志异·白秋练》有感，咏叹爱情与坚守。</p>
+                    <p class="text-dark/80"><span class="font-medium">赏析：</span>前四句"枯荆黄土满孤城，烟月凝霜寒气生"渲染苍凉环境，后四句"千征城破壮兵尽，万里途艰马伴行"以战争喻爱情阻力，末句"纵阻万程情却近"赞爱情超越距离的力量。</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 9. 徽州游记 -->
+    <div class="modal fade" id="poemDetail9" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered max-w-md">
+            <div class="modal-content bg-white rounded-lg shadow-xl">
+                <div class="modal-header border-b border-secondary/20">
+                    <h5 class="modal-title text-primary font-serif">《徽州游记》注释</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body p-6">
+                    <p class="text-dark/80 mb-3"><span class="font-medium">注释：</span>游历徽州所作，描绘江南风光与心境。</p>
+                    <p class="text-dark/80"><span class="font-medium">赏析：</span>"墨迹山川轻云净，诗雨江南赤子心"融景入情，将山水比作笔墨，"倚舟闲月""凭栏望远"勾勒闲适情态，尽显江南诗意。</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 10. 瑞雪有怀 -->
+    <div class="modal fade" id="poemDetail10" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered max-w-md">
+            <div class="modal-content bg-white rounded-lg shadow-xl">
+                <div class="modal-header border-b border-secondary/20">
+                    <h5 class="modal-title text-primary font-serif">《瑞雪有怀》注释</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body p-6">
+                    <p class="text-dark/80 mb-3"><span class="font-medium">注释：</span>冬日观雪感怀，追忆往事。</p>
+                    <p class="text-dark/80"><span class="font-medium">赏析：</span>首联"冬月清寒近，秋华逐水流"写时序更迭，颔联"三年驹隙事，一霎近时休"叹时光迅疾，颈联"微颔忆前日，孤身梦旧游"转入回忆，尾联以雪景收束，意境清寂。</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // 筛选功能实现
+        document.addEventListener('DOMContentLoaded', () => {
+            const filterBtns = document.querySelectorAll('.filter-btn');
+            const poemCards = document.querySelectorAll('.poem-card');
+            const backToTopButton = document.getElementById('backToTop');
+
+            // 筛选按钮点击事件
+            filterBtns.forEach(btn => {
+                btn.addEventListener('click', () => {
+                    const filterType = btn.getAttribute('data-filter');
+                    
+                    // 更新按钮样式
+                    filterBtns.forEach(b => {
+                        b.classList.remove('filter-btn-active', 'filter-btn-inactive');
+                        b.classList.add('filter-btn-inactive');
+                    });
+                    btn.classList.remove('filter-btn-inactive');
+                    btn.classList.add('filter-btn-active');
+
+                    // 筛选诗歌卡片
+                    poemCards.forEach(card => {
+                        if (filterType === 'all' || card.getAttribute('data-type') === filterType) {
+                            card.classList.remove('hidden');
+                        } else {
+                            card.classList.add('hidden');
+                        }
+                    });
+
+                    // 滚动到顶部
+                    window.scrollTo({ top: 0, behavior: 'smooth' });
+                });
+            });
+
+            // 回到顶部功能
+            window.addEventListener('scroll', () => {
+                if (window.pageYOffset > 500) {
+                    backToTopButton.classList.remove('opacity-0', 'invisible');
+                    backToTopButton.classList.add('opacity-100', 'visible');
+                } else {
+                    backToTopButton.classList.remove('opacity-100', 'visible');
+                    backToTopButton.classList.add('opacity-0', 'invisible');
+                }
+            });
+
+            backToTopButton.addEventListener('click', () => {
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            });
+        });
+    </script>
+</body>
+</html>
